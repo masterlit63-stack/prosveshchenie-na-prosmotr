@@ -28,9 +28,10 @@
   .lead{ background:rgba(255,255,255,.62); border:1px solid var(--line); border-radius:14px;
          padding:20px 26px; margin:28px 0 4px; color:#5a5247; font-size:16.5px; line-height:1.7; }
   nav.toc{ margin:34px 0 0; }
-  nav.toc h2{ font-size:12px; text-transform:uppercase; letter-spacing:.2em; color:var(--soft); margin:0 0 12px; text-align:center; }
-  nav.toc ol{ list-style:none; margin:0; padding:0; }
-  nav.toc li{ margin:9px 0; text-align:center; }
+  nav.toc h2{ font-size:12px; text-transform:uppercase; letter-spacing:.2em; color:var(--soft); margin:0 0 12px; text-align:left; }
+  nav.toc ol{ list-style:decimal; margin:0; padding-left:28px; }
+  nav.toc li{ margin:9px 0; text-align:left; padding-left:6px; }
+  nav.toc li::marker{ color:var(--accent2); font-weight:600; }
   nav.toc a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:1px; }
   nav.toc a:hover{ border-bottom-color:var(--accent2); }
   article{ margin-top:50px; padding-top:42px; border-top:1px solid var(--line); }
