@@ -45,6 +45,14 @@
   .tldr .lbl{ display:block; color:var(--accent2); text-transform:uppercase; letter-spacing:.2em;
               font-size:11px; font-weight:600; margin-bottom:6px; }
   .tldr .txt{ display:block; font-size:18.5px; line-height:1.5; font-weight:600; color:#241f1b; }
+  .tldr-row{ display:flex; gap:18px; align-items:flex-start; margin:2px 0 24px; }
+  .tldr-row .tldr{ flex:1 1 auto; margin:0; }
+  figure.portrait{ flex:0 0 132px; margin:0; text-align:center; }
+  figure.portrait img{ width:132px; height:auto; display:block; border-radius:10px; border:1px solid var(--line); }
+  figure.portrait figcaption{ font-size:11px; color:var(--soft); font-style:italic; margin-top:6px; line-height:1.3; }
+  @media(max-width:600px){
+    .tldr-row{ flex-direction:column; } figure.portrait{ flex:none; align-self:center; }
+  }
   figure.zimg{ margin:6px auto 26px; text-align:center; max-width:460px; }
   figure.zimg img{ max-width:100%; border:1px solid var(--line); border-radius:12px; }
   figure.zimg figcaption{ color:var(--soft); font-size:12.5px; font-style:italic; margin-top:8px; }
@@ -312,7 +320,7 @@
   <h2>Метод Фитина: как сделать, чтобы тебя наконец поняли</h2>
   <div class="rubric">Пост · вне плана · практики · ясность в письме и делах · лаконичный стиль · ред. 4 (последняя)</div>
   <div class="reddate">Последняя редакция: 04.07.2026</div>
-  <div class="tldr"><span class="lbl">Суть</span><span class="txt">Начни с главного — и тебя поймут с первых слов:<br>в письме, в разговоре, в любой просьбе.</span></div>
+  <div class="tldr-row"><div class="tldr"><span class="lbl">Суть</span><span class="txt">Начни с главного — и тебя поймут с первых слов:<br>в письме, в разговоре, в любой просьбе.</span></div><figure class="portrait"><img src="img/fitin-portret.jpg" alt="П.М. Фитин" loading="lazy"><figcaption>П.М. Фитин</figcaption></figure></div>
 
   <p>Знакомо? Ты что-то объясняешь, просишь, доказываешь — вслух или в переписке, — а человек будто не понимает, чего ты хочешь. Переспрашивает «так что нужно-то?», отвечает не о том. А если это письмо или сообщение — нередко и вовсе не дочитывает.</p>
   <p>И дело тут чаще не в том, что мысль плохая. Просто <strong>самое главное — свою просьбу, свой вывод — ты приберёг к концу</strong>, после долгого захода. А туда человек уже не добрался.</p>
