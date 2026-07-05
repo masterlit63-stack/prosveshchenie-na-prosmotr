@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMic+PHJlY3Qgd2lkdGg9JzMyJyBoZWlnaHQ9JzMyJyByeD0nNycgZmlsbD0nIzliNmE0MycvPjxwb2x5Z29uIHBvaW50cz0nMTYsMyAyMCwxMiAyOSwxNiAyMCwyMCAxNiwyOSAxMiwyMCAzLDE2IDEyLDEyJyBmaWxsPScjZjdmMmU5Jy8+PC9zdmc+">
+<title>Метод Фитина: как сделать, чтобы тебя наконец поняли</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+  :root{ --ink:#2b2622; --soft:#8a8073; --line:#e7ded0; --accent:#9b6a43; --accent2:#b98e5e; }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; color:var(--ink);
+    background:
+      radial-gradient(1100px 520px at 50% -8%, #fffdf8 0%, rgba(255,253,248,0) 62%),
+      linear-gradient(180deg,#f7f2e9 0%, #f1ebdd 100%);
+    background-attachment:fixed;
+    font-family:'Lora',Georgia,serif; font-size:19px; line-height:1.78;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{ max-width:720px; margin:0 auto; padding:0 22px 90px; }
+  header.top{ text-align:center; padding:66px 0 24px; }
+  header.top .mark{ color:var(--accent2); letter-spacing:.42em; font-size:12px; text-transform:uppercase; }
+  header.top h1{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size:54px; line-height:1.05; margin:12px 0 8px; }
+  header.top .sub{ color:var(--soft); font-size:15px; letter-spacing:.02em; }
+  .ornament{ text-align:center; color:var(--accent2); letter-spacing:.4em; margin:22px 0 0; font-size:15px; }
+  .lead{ background:rgba(255,255,255,.62); border:1px solid var(--line); border-radius:14px;
+         padding:20px 26px; margin:28px 0 4px; color:#5a5247; font-size:16.5px; line-height:1.7; }
+  nav.toc{ margin:34px 0 0; }
+  nav.toc h2{ font-size:12px; text-transform:uppercase; letter-spacing:.2em; color:var(--soft); margin:0 0 12px; text-align:left; }
+  nav.toc ol{ list-style:decimal; margin:0; padding-left:28px; }
+  nav.toc li{ margin:12px 0; text-align:left; padding-left:6px; }
+  nav.toc li::marker{ color:var(--accent2); font-weight:600; }
+  nav.toc a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:1px; }
+  nav.toc .toctag{ display:block; color:var(--soft); font-size:12px; letter-spacing:.02em; margin-top:3px; }
+  nav.toc a:hover{ border-bottom-color:var(--accent2); }
+  article{ margin-top:50px; padding-top:42px; border-top:1px solid var(--line); }
+  article h2{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:34px; line-height:1.18; margin:0 0 6px; color:#241f1b; }
+  .rubric{ color:var(--soft); font-size:13px; letter-spacing:.02em; margin-bottom:5px; font-style:italic; }
+  .reddate{ color:var(--soft); font-size:12.5px; font-style:italic; margin:0 0 26px; }
+  .tldr{ margin:2px 0 24px; padding:15px 20px; background:rgba(255,255,255,.6);
+         border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; }
+  .tldr .lbl{ display:block; color:var(--accent2); text-transform:uppercase; letter-spacing:.2em;
+              font-size:11px; font-weight:600; margin-bottom:6px; }
+  .tldr .txt{ display:block; font-size:18.5px; line-height:1.5; font-weight:600; color:#241f1b; }
+  .tldr-row{ display:flex; gap:18px; align-items:flex-start; margin:2px 0 24px; }
+  .tldr-row .tldr{ flex:1 1 auto; margin:0; }
+  figure.portrait{ flex:0 0 132px; margin:0; text-align:center; }
+  figure.portrait img{ width:132px; height:auto; display:block; border-radius:10px; border:1px solid var(--line); }
+  figure.portrait figcaption{ font-size:11px; color:var(--soft); font-style:italic; margin-top:6px; line-height:1.3; }
+  @media(max-width:600px){
+    .tldr-row{ flex-direction:column; } figure.portrait{ flex:none; align-self:center; }
+  }
+  figure.zimg{ margin:6px auto 26px; text-align:center; max-width:460px; }
+  figure.zimg img{ max-width:100%; border:1px solid var(--line); border-radius:12px; }
+  figure.zimg figcaption{ color:var(--soft); font-size:12.5px; font-style:italic; margin-top:8px; }
+  .sources{ margin:28px 0 0; padding:16px 20px; background:rgba(255,255,255,.5);
+            border:1px solid var(--line); border-radius:12px; }
+  .sources h3{ font-size:11px; text-transform:uppercase; letter-spacing:.18em; color:var(--soft); margin:0 0 10px; }
+  .sources ul{ margin:0; padding-left:18px; }
+  .sources li{ margin:0 0 10px; font-size:15.5px; line-height:1.5; }
+  .sources a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; }
+  .sources a:hover{ border-bottom-color:var(--accent2); }
+  .sources .anons{ color:var(--soft); font-size:13.5px; }
+  .materials{ margin:28px 0 0; padding:18px 22px; background:rgba(255,255,255,.5);
+              border:1px solid var(--line); border-radius:12px; }
+  .materials .mat-head{ font-size:11px; text-transform:uppercase; letter-spacing:.18em;
+                        color:var(--soft); margin:0 0 12px; }
+  .materials .mat-title{ display:block; color:var(--accent); font-size:16.5px; font-weight:600;
+                         text-decoration:none; line-height:1.5; border-bottom:1px solid transparent; }
+  .materials .mat-title:not(:first-of-type){ margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  .materials .mat-title:hover{ border-bottom-color:var(--accent2); }
+  .materials .mat-lead{ margin:11px 0 0; color:#5a5247; font-size:14.5px; font-style:italic; }
+  .materials ul.mat-list{ margin:9px 0 0; padding-left:20px; columns:2; column-gap:26px; }
+  .materials ul.mat-list li{ margin:4px 0; font-size:14px; color:var(--soft); break-inside:avoid; line-height:1.45; }
+  @media(max-width:600px){ .materials ul.mat-list{ columns:1; } }
+  p{ margin:0 0 18px; }
+  strong{ color:#1c1813; font-weight:600; }
+  ol.steps{ margin:12px 0 22px; padding-left:0; list-style:none; counter-reset:s; }
+  ol.steps li{ counter-increment:s; position:relative; margin:0 0 16px; padding-left:44px; }
+  ol.steps li::before{ content:counter(s); position:absolute; left:0; top:.05em; width:28px; height:28px;
+                       line-height:28px; text-align:center; border-radius:50%; background:var(--accent);
+                       color:#fff; font-size:14px; }
+  .dlg{ margin:6px 0 16px; padding:4px 0 4px 20px; border-left:3px solid var(--accent2); color:#5a5247; font-style:italic; }
+  .dlg p{ margin:0 0 6px; }
+  .final{ font-style:italic; color:#4f483f; border-top:1px dashed var(--line); padding-top:18px; margin-top:26px; }
+  .fb{ text-align:center; margin:46px 0 0; }
+  .fb a.btn{ display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
+             padding:14px 28px; border-radius:12px; font-size:16.5px; box-shadow:0 6px 18px rgba(155,106,67,.22); }
+  .fb a.btn:hover{ background:#875a37; }
+  .fb .muted{ color:var(--soft); font-size:14px; margin-top:12px; }
+  footer{ margin-top:72px; text-align:center; color:var(--soft); font-size:13.5px; }
+  @media (max-width:600px){
+    body{ font-size:18px; } .wrap{ padding:0 18px 70px; }
+    header.top{ padding:50px 0 18px; } header.top h1{ font-size:42px; }
+    article h2{ font-size:28px; }
+  }
+  @media print{ body{ background:#fff; } nav.toc{ display:none; } article{ page-break-inside:avoid; } }
+  article{ border-top:none; margin-top:14px; padding-top:0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="mark">просвещение</div>
+  <div class="ornament">✦ ❧ ✦</div>
+</header>
+
+<article id="zametka">
+  <h2>Метод Фитина: как сделать, чтобы тебя наконец поняли</h2>
+  <div class="rubric">Пост · вне плана · практики · ясность в письме и делах · лаконичный стиль · ред. 4 (последняя)</div>
+  <div class="reddate">Последняя редакция: 04.07.2026</div>
+  <div class="tldr-row"><div class="tldr"><span class="lbl">Суть</span><span class="txt">Начни с главного — и тебя поймут с первых слов:<br>в письме, в разговоре, в любой просьбе.</span></div><figure class="portrait"><img src="img/fitin-portret.jpg" alt="П.М. Фитин" loading="lazy"><figcaption>П.М. Фитин</figcaption></figure></div>
+
+  <p>Знакомо? Ты что-то объясняешь, просишь, доказываешь — вслух или в переписке, — а человек будто не понимает, чего ты хочешь. Переспрашивает «так что нужно-то?», отвечает не о том. А если это письмо или сообщение — нередко и вовсе не дочитывает.</p>
+  <p>И дело тут чаще не в том, что мысль плохая. Просто <strong>самое главное — свою просьбу, свой вывод — ты приберёг к концу</strong>, после долгого захода. А туда человек уже не добрался.</p>
+  <p>Эту беду больше 80 лет назад точно понял один человек. Павел Михайлович Фитин (1907–1971) возглавлял советскую внешнюю разведку всю войну, с 1939-го по 1946-й. А до разведки был редактором в издательстве — знал, как человек читает и где теряет мысль. Отсюда его правило для донесений: <strong>сначала суть и выводы — потом подробности. Не наоборот.</strong> Руководитель открывал документ и с первых строк понимал главное — что случилось, что это значит, что предлагается; а дальше читал уже по надобности. Говорят, этот порядок прижился в разведке надолго.</p>
+  <figure class="zimg"><img src="img/fitin-metod.png" alt="Метод Фитина: сначала суть, потом подробности" loading="lazy"><figcaption>Метод Фитина: сначала суть, потом подробности</figcaption></figure>
+  <p>А теперь узнай себя — и попробуй так же:</p>
+  <div class="dlg"><p>— <strong>В разговоре с близким.</strong> Начинаешь с упрёков и издалека — «ты вечно…», «ты никогда…» — и разговор сразу летит в ссору. Скажи спокойно и сразу главное: «Мне важно вот что — потому что…». Тогда тебя услышат, а не заведутся в ответ.</p><p>— <strong>Ребёнку или подростку.</strong> Долгая нотация — он «отключается». Скажи суть: «Мне нужно, чтобы… И вот чем это важно тебе». Дойдёт с первого раза.</p><p>— <strong>Начальнику.</strong> Мнёшься, заходишь издалека — он не вникает. Первая фраза: «Прошу решить вот это, причина — такая». Ответит и решит быстрее.</p><p>— <strong>В рабочем чате.</strong> Пять сообщений подряд — все запутались. Собери в одно: «Проблема такая. Нужно вот что». Никто не переспрашивает.</p><p>— <strong>У врача.</strong> Волнуешься, вываливаешь всё подряд — врач не улавливает главное. Начни: «Больше всего беспокоит вот это, началось тогда-то». Поймёт и поможет точнее.</p><p>— <strong>В резюме или отклике на вакансию.</strong> Начинаешь с «родился, учился, окончил…» — рекрутёр пролистнул, не дочитав. Поставь вперёд, чем ты полезен: «Электрик, 10 лет опыта, без вредных привычек, готов выйти завтра». Вот такое дочитывают — и зовут на собеседование.</p></div>
+  <p>Запомнить легко, простая формула: <strong>что</strong> главное · <strong>почему</strong> это важно · <strong>что</strong> предлагаешь · и уже ниже — подробности.</p>
+  <p>И выручает это дважды. Другого — сразу понять тебя. А тебя самого — яснее думать: пока не скажешь суть одной фразой, ты и сам толком не знаешь, чего хочешь. Поставил главное вперёд — и мысль собралась.</p>
+  <p class="final">Попробуй сегодня на любом сообщении: не пиши длинный заход — вынеси вывод наверх. Сначала суть, потом подробности. Иногда только этого и не хватает, чтобы тебя наконец услышали.</p>
+  <div class="sources"><h3>Источники и материалы</h3>
+    <ul><li><a href="https://istorianaroda.ru/news/detail.php?ID=11642" target="_blank" rel="noopener">«История народа» — «Павел Фитин: командующий невидимым фронтом»</a><span class="anons"> — биография и роль Фитина во главе внешней разведки</span></li><li><a href="https://svr.gov.ru/smi/2019/05/reshayushchiy-vybor-80-let-nazad-sovetskuyu-razvedku-vozglavil-pavel-fitin-.htm" target="_blank" rel="noopener">СВР России — «Решающий выбор: 80 лет назад советскую разведку возглавил Павел Фитин»</a><span class="anons"> — официальный очерк; здесь и о том, как при Фитине документы стали начинать с главного и выводов</span></li></ul>
+  </div>
+  <div class="materials">
+    <div class="mat-head">Материалы к посту</div>
+    <a class="mat-title" href="materialy/metod-fitina.html" target="_blank" rel="noopener">Полный разбор метода: принципы, похожие подходы, история и источники →</a>
+    <a class="mat-title" href="materialy/metod-fitina-primery.html" target="_blank" rel="noopener">Как сказать, чтобы вас услышали: 15 ситуаций из жизни →</a>
+    <div class="mat-lead">Найдёте свою:</div>
+    <ul class="mat-list"><li>Разговор с учителем, воспитателем, тренером</li><li>Заявление в школу, поликлинику или организацию</li><li>Разговор с близким человеком</li><li>Просьба о помощи</li><li>Объяснение на работе</li><li>Сообщение в семейном или общем чате</li><li>Обращение к мастеру или специалисту</li><li>Разговор с ребёнком</li><li>Объяснение своей позиции в споре</li><li>Разговор с пожилыми родителями</li><li>Обсуждение семейных дел</li><li>Обращение к соседям</li><li>Разговор о деньгах или долге</li><li>Официальная переписка, письмо, заявление</li></ul>
+  </div>
+</article>
+
+<footer>
+  Просвещение
+</footer>
+
+</div>
+</body>
+</html>
