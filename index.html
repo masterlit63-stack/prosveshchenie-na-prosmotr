@@ -72,6 +72,11 @@
                          text-decoration:none; line-height:1.5; border-bottom:1px solid transparent; }
   .materials .mat-title:not(:first-of-type){ margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
   .materials .mat-title:hover{ border-bottom-color:var(--accent2); }
+  .materials .mat-title .cue{ color:var(--accent2); vertical-align:-3px; margin-right:9px;
+                              animation:cue-nudge 1.8s ease-in-out infinite; }
+  .materials .mat-title:hover .cue{ color:var(--accent); }
+  @keyframes cue-nudge{ 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(4px); } }
+  @media (prefers-reduced-motion: reduce){ .materials .mat-title .cue{ animation:none; } }
   .materials .mat-lead{ margin:11px 0 0; color:#5a5247; font-size:14.5px; font-style:italic; }
   .materials ul.mat-list{ margin:9px 0 0; padding-left:20px; columns:2; column-gap:26px; }
   .materials ul.mat-list li{ margin:4px 0; font-size:14px; color:var(--soft); break-inside:avoid; line-height:1.45; }
@@ -340,7 +345,7 @@
   <p>И выручает это дважды. Другого — сразу понять тебя. А тебя самого — яснее думать: пока не скажешь суть одной фразой, ты и сам толком не знаешь, чего хочешь. Поставил главное вперёд — и мысль собралась.</p>
   <p class="final">Попробуй сегодня на любом сообщении: не пиши длинный заход — вынеси вывод наверх. Сначала суть, потом подробности. Иногда только этого и не хватает, чтобы тебя наконец услышали.</p>
   <div class="materials">
-    <a class="mat-title" href="materialy/metod-fitina-primery.html" target="_blank" rel="noopener">Как сказать, чтобы вас услышали: 15 ситуаций из жизни →</a>
+    <a class="mat-title" href="materialy/metod-fitina-primery.html" target="_blank" rel="noopener"><svg class="cue" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M3 12h14M11 6l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Как сказать, чтобы вас услышали: 15 ситуаций из жизни</a>
     <div class="mat-lead">Найдёте свою:</div>
     <ul class="mat-list"><li>Разговор с учителем, воспитателем, тренером</li><li>Заявление в школу, поликлинику или организацию</li><li>Разговор с близким человеком</li><li>Просьба о помощи</li><li>Объяснение на работе</li><li>Сообщение в семейном или общем чате</li><li>Обращение к мастеру или специалисту</li><li>Разговор с ребёнком</li><li>Объяснение своей позиции в споре</li><li>Разговор с пожилыми родителями</li><li>Обсуждение семейных дел</li><li>Обращение к соседям</li><li>Разговор о деньгах или долге</li><li>Официальная переписка, письмо, заявление</li></ul>
   </div>
